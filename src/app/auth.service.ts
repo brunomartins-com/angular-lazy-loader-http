@@ -21,7 +21,7 @@ export class AuthService {
   // store the URL so we can redirect after logging in
   redirectUrl: string;
 
-  login(): Observable<boolean> {
+  login(): Observable<User> {
     this.log('LOGIN');
     return this.http
       .post<User>(
